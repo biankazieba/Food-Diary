@@ -5,42 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo.svg" />
     <title>Homepage</title>
 </head>
 
+
 <body>
-
     <!--Navbar-->
-
     <div class="navbar">
-        <img class="logo" src="/assets/img/logo1.svg">
-        <button class="Home" href="">Home</button>
-        <button class="Diary" href="">Diary</button>
-        <button class="l" href="">Recipes</button>
-        <button class="login" href="">Login</button>
+        <img class="logo" src="/assets/img/logo3.svg">
+        <button class="navi" href="#">Login</button>
+        <button class="navi" href="#">About</button>
+        <button class="navi" href="#">Recipes</button>
+        <button class="navi" href="#">Diary</button>
+        <button class="navi" href="#">Home</button>
     </div>
-
-    <!--Flexboxen-->
-    <div class="container">
-        <div class="box1">
-            <img class="foodimg" src="/assets/img/foodimg.jpg">
-        </div>
-        <div class="box2"></div>
-        <div class="box3">
-            <img class="logoimg" src="/assets/img/logo.svg">
-        </div>
-        <img class="pcimg" src="/assets/img/pc.png">
-        <div class="pc">
-        </div>
+    <div class="navbar-bg"></div>
+    <img class="shopping-cart"
+        src="https://media.istockphoto.com/photos/shopping-cart-with-different-food-products-picture-id1306977521?k=20&amp;m=1306977521&amp;s=612x612&amp;w=0&amp;h=NJJ94GJUHayAjWSF86M3TaQZaCdkmy9WvtWIchsyQ1E=">
+    <div class="text-box">
+        <h1>Nutrition<br>
+            <p>Tracking</p> Made <br>Easy!
+        </h1>
     </div>
+    <div class="circle"></div>
+    <div class="about"></div>
+    <div class="box"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
-    </script>
     <script src="assets/script.js"></script>
 </body>
 
