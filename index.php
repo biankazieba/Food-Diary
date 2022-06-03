@@ -19,9 +19,12 @@
         <button class="navi" href="#">About</button>
         <button class="navi" href="#">Recipes</button>
         <button class="navi" href="#">Diary</button>
-        <button class="navi" href="#">Home</button>
+        <button class="navi-active" href="#">Home</button>
     </div>
     <div class="navbar-bg"></div>
+
+    <!--Body-->
+
     <img class="shopping-cart"
         src="https://media.istockphoto.com/photos/shopping-cart-with-different-food-products-picture-id1306977521?k=20&amp;m=1306977521&amp;s=612x612&amp;w=0&amp;h=NJJ94GJUHayAjWSF86M3TaQZaCdkmy9WvtWIchsyQ1E=">
     <div class="text-box">
@@ -30,8 +33,18 @@
         </h1>
     </div>
     <div class="circle"></div>
-    <div class="about"></div>
-    <div class="box"></div>
+
+    <!--Boxes-->
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <!--Footer-->
+
+    <div class="footer">
+        <p>footer</p>
+    </div>
 
     <script src="assets/script.js"></script>
 </body>

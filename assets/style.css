@@ -1,5 +1,9 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css");
 
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar {
     width: 89%;
     height: 6rem;
@@ -31,6 +35,19 @@
     font-weight: bold;
     border: none;
     background: none;
+}
+
+.navi-active {
+    float: right;
+    padding: 2rem;
+    padding-right: 2rem;
+    font-family: Monospace;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    color: #b36880;
 }
 
 .shopping-cart {
@@ -75,19 +92,41 @@ p {
     animation-delay: -3s;
 }
 
-.about {
-    width: 97%;
-    height: 20rem;
+.box1 {
+    width: 95%;
+    height: 25rem;
     border-radius: 25px;
     background-color: #f0e1e6;
     margin-top: 10rem;
+    margin-left: 2rem;
 }
 
-.box {
-    width: 100%;
+.box2 {
+    width: 46%;
+    height: 30rem;
+    border-radius: 25px;
+    background-color: #c597a7;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    float: left;
+}
+
+.box3 {
+    width: 46%;
+    height: 30rem;
+    border-radius: 25px;
+    background-color: #944b64;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    float: left;
+}
+
+.footer {
+    width: 95%;
     height: 15rem;
     background-color: #ffffff;
-    margin-top: 5rem;
+    margin-top: 35rem;
+    margin-left: 2rem;
 }
 
 @keyframes circle {
