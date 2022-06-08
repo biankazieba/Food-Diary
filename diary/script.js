@@ -12,3 +12,13 @@ function scrollFunction() {
         document.getElementById("logo").style.fontSize = "15px";
     }
 }
+
+let dayname = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+let date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+
+let fullDate = `${day}.${month}.${year} `;
+document.getElementById("date").innerText = fullDate;
+document.getElementById("dayname").innerText = dayname[date.getDay() - 1];

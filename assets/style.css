@@ -1,29 +1,41 @@
 @import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css");
 
+
+
 html {
     scroll-behavior: smooth;
 }
 
-.navbar {
-    width: 89%;
-    height: 6rem;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#navbar {
+    width: 100%;
     position: fixed;
     background-color: rgb(255, 255, 255);
-    padding-left: 4rem;
-    padding-right: 4rem;
+    top: 0;
+    z-index: 99;
+    padding: 25px 10px;
+    transition: 0.4s;
+    overflow: hidden;
 }
 
 .navbar-bg {
-    width: 89%;
-    height: 6rem;
+    width: 100%;
+    height: 6.5rem;
     position: relative;
 }
 
-.logo {
-    height: auto;
-    width: 11rem;
-    margin: 2rem;
-    margin-top: 20px;
+#logo {
+    transition: 0.4s;
+    width: 200px;
+    margin-left: 5rem;
+    margin-top: 1rem;
 }
 
 .navi {
@@ -31,10 +43,12 @@ html {
     padding: 2rem;
     padding-right: 2rem;
     font-family: Monospace;
+    text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     border: none;
     background: none;
+    color: black;
 }
 
 .navi-active {
@@ -52,9 +66,11 @@ html {
 
 .shopping-cart {
     height: auto;
-    width: 33rem;
+    width: 44rem;
     padding-left: 9rem;
     float: left;
+    position: absolute;
+    z-index: -1;
 }
 
 .text-box {
@@ -62,11 +78,11 @@ html {
     height: 20rem;
     float: right;
     margin-top: 3rem;
-    margin-right: 10rem;
-    z-index: 4;
+    margin-right: 12rem;
+    position: relative;
 }
 
-h1 {
+.text-box h1 {
     font-family: 'metropolisblack ', sans-serif;
     font-size: 3.875em;
     line-height: 1.03;
@@ -82,9 +98,10 @@ p {
 .circle {
     width: 320px;
     height: 320px;
-    background-color: #f0e1e6;
+    background-color: #f0e1e681;
     border-radius: 50%;
     margin-left: 50rem;
+    margin-top: 2rem;
     position: relative;
     z-index: -1;
     animation-name: circle;
@@ -94,12 +111,34 @@ p {
 
 .box1 {
     width: 95%;
-    height: 25rem;
+    height: 15rem;
     border-radius: 25px;
-    background-color: #f0e1e6;
-    margin-top: 10rem;
+    background-color: #eedce5;
+    margin-top: 1rem;
     margin-left: 2rem;
+    position: relative;
+
 }
+
+#dayname {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 4em;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0;
+    margin-left: 25rem;
+    padding-top: 3rem;
+}
+
+#date {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 0;
+    margin-left: 34rem;
+}
+
 
 .box2 {
     width: 46%;
@@ -122,12 +161,28 @@ p {
 }
 
 .footer {
-    width: 95%;
-    height: 15rem;
+    width: 90%;
+    height: 10rem;
     background-color: #ffffff;
     margin-top: 35rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: rgb(0, 0, 0) 2px solid;
 }
+
+.footer p {
+    color: black;
+    padding: 3rem;
+    font-family: 'metropolisblack ', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
 
 @keyframes circle {
     50% {

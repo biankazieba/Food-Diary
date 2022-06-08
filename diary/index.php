@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo.svg" />
-    <title>Homepage</title>
+    <title>Diary</title>
 </head>
 
 
@@ -17,31 +17,24 @@
         <img id="logo" src="/assets/img/logo3.svg">
         <a class="navi" href="/login/index.php">Login</a>
         <a class="navi" href="#">Recipes</a>
-        <a class="navi" href="/diary/index.php">Diary</a>
-        <a class="navi-active" href="#">Home</a>
+        <a class="navi-active" href="#">Diary</a>
+        <a class="navi" href="/index.php">Home</a>
     </div>
     <div class="navbar-bg"></div>
 
-    <!--Body-->
-
-    <img class="shopping-cart"
-        src="https://media.istockphoto.com/photos/shopping-cart-with-different-food-products-picture-id1306977521?k=20&amp;m=1306977521&amp;s=612x612&amp;w=0&amp;h=NJJ94GJUHayAjWSF86M3TaQZaCdkmy9WvtWIchsyQ1E=">
-    <div class="text-box">
-        <h1>Nutrition<br>
-            <p>Tracking</p> Made <br>Easy!
-        </h1>
+    <div class="box1">
+        <h1 id="dayname"></h1>
+        <h1 id="date"></h1>
     </div>
-    <div class="circle"></div>
-    <!--Boxes-->
-    <!--Footer-->
+    <div class="box2"></div>
+    <div class="box3"></div>
 
     <div class="footer">
         <p>Food Diary</p>
         <p>Abschlussprojekt von Bianka Zieba</p>
         <p>ZLI 2021/2022</p>
     </div>
-
-    <script src="assets/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
