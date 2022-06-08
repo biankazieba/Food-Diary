@@ -23,16 +23,22 @@
     <div class="navbar-bg"></div>
 
     <!--Body-->
-
-    <img class="shopping-cart"
-        src="https://media.istockphoto.com/photos/shopping-cart-with-different-food-products-picture-id1306977521?k=20&amp;m=1306977521&amp;s=612x612&amp;w=0&amp;h=NJJ94GJUHayAjWSF86M3TaQZaCdkmy9WvtWIchsyQ1E=">
-    <div class="text-box">
-        <h1>Nutrition<br>
-            <p>Tracking</p> Made <br>Easy!
-        </h1>
+    <div class="homecontainer">
+        <img class="shopping-cart"
+            src="https://media.istockphoto.com/photos/shopping-cart-with-different-food-products-picture-id1306977521?k=20&amp;m=1306977521&amp;s=612x612&amp;w=0&amp;h=NJJ94GJUHayAjWSF86M3TaQZaCdkmy9WvtWIchsyQ1E=">
+        <div class="text-box">
+            <h1>Nutrition<br>
+                <p>Tracking</p> Made <br>Easy!
+            </h1>
+        </div>
+        <div class="circle"></div>
     </div>
-    <div class="circle"></div>
     <!--Boxes-->
+    <div class="boxes">
+        <div class="firstbox"></div>
+        <div class="secondbox"></div>
+    </div>
+
     <!--Footer-->
 
     <div class="footer">

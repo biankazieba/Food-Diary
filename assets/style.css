@@ -27,7 +27,7 @@ body {
 
 .navbar-bg {
     width: 100%;
-    height: 6.5rem;
+    height: 5rem;
     position: relative;
 }
 
@@ -64,10 +64,16 @@ body {
     color: #b36880;
 }
 
+.homecontainer {
+    width: 100%;
+    height: 34rem;
+}
+
 .shopping-cart {
     height: auto;
     width: 44rem;
     padding-left: 9rem;
+    margin-top: -40px;
     float: left;
     position: absolute;
     z-index: -1;
@@ -77,7 +83,7 @@ body {
     width: 25rem;
     height: 20rem;
     float: right;
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-right: 12rem;
     position: relative;
 }
@@ -96,12 +102,12 @@ p {
 }
 
 .circle {
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
     background-color: #f0e1e681;
     border-radius: 50%;
     margin-left: 50rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
     position: relative;
     z-index: -1;
     animation-name: circle;
@@ -139,24 +145,31 @@ p {
     margin-left: 34rem;
 }
 
+.boxes {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.box2 {
-    width: 46%;
+.firstbox {
+    width: 44%;
     height: 30rem;
     border-radius: 25px;
     background-color: #c597a7;
-    margin-top: 2rem;
-    margin-left: 2rem;
+    margin: 3rem;
+    margin-right: 1rem;
     float: left;
 }
 
-.box3 {
-    width: 46%;
+.secondbox {
+    width: 44%;
     height: 30rem;
     border-radius: 25px;
-    background-color: #944b64;
-    margin-top: 2rem;
-    margin-left: 2rem;
+    background-color: #f0e1e681;
+    margin: 3rem;
+    margin-left: 1rem;
     float: left;
 }
 
