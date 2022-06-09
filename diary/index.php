@@ -26,8 +26,35 @@
         <h1 id="dayname"></h1>
         <h1 id="date"></h1>
     </div>
-    <input class="foodinput" classtype="text" placeholder="Track your Nutrition" />
-    <div class="box2"></div>
+    <form autocomplete="off" action="index.php" method="post">
+        <input name="input" class="foodinput" classtype="text" placeholder="Track your Nutrition" />
+        <button type="submit" name="add" class="add">ADD</button>
+    </form>
+    <div class="box2">
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] == "POST" and isset(($_POST['add']))) {
+
+            $url = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
+            $data = json_encode(array('query' => $_POST['input'], 'include_subrecipe' => true));
+
+            $options = array(
+                'http' => array(
+                    'header'  => "Content-type: application/json\r\n" .
+                        "x-app-id: 76e56102\r\n" .
+                        "x-app-key: e9b44356bf92babee2a1b35ed581036b\r\n",
+                    'method'  => 'POST',
+                    'content' => $data
+                )
+            );
+            $context  = stream_context_create($options);
+            $result = json_decode(file_get_contents($url, false, $context), true);
+            if ($result === FALSE) {
+            }
+
+            echo ('<h1 class="food-name"' . $result['foods'][0]['food_name'] . '</h1>');
+        }
+        ?>
+    </div>
 
     <div class="footer">
         <p>Food Diary</p>

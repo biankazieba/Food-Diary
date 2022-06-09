@@ -16,7 +16,7 @@
         <div class="form-container sign-up-container">
             <form action="index.php" method="post">
                 <h1>Sign up</h1>
-                <span>or use your email</span>
+                <span>to check your food diary</span>
                 <input name="username" type="text" placeholder="Username" />
                 <input name="password" type="password" placeholder="Password" />
                 <input name="passwordConfirm" type="password" placeholder="Confirm Password" />
@@ -24,13 +24,13 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="index.php" method="post">
                 <h1>Sign in</h1>
                 <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input name="username" type="text" placeholder="Username" />
+                <input name="password" type="password" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                <button type="submit" name="signIn">Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -68,6 +68,34 @@
                 $json['users'][] = ["username" => $_POST['username'], "password" => password_hash($_POST['password'], PASSWORD_DEFAULT)];
                 $jsonString = json_encode($json);
                 file_put_contents("./users.json", $jsonString);
+                header("location:../index.php");
+            }
+        }
+    }
+    if ($_SERVER['REQUEST_METHOD'] == "POST" and isset(($_POST['signIn']))) {
+        if (empty($_POST['username'])) {
+            echo "<script>alert('No username found!');</script>";
+        } else if (empty($_POST['password'])) {
+            echo "<script>alert('No password found!');</script>";
+        } else {
+            $jsonFile = file_get_contents("./users.json");
+            $json = json_decode($jsonFile, true);
+
+            if (!in_array($_POST['username'], array_column($json['users'], "username"))) {
+                echo "<script>alert('User not found, please sign up!');</script>";
+            }
+
+            // user aus array nehmen
+            $user = null;
+            foreach ($json['users'] as $struct) {
+                if ($_POST['username'] == $struct['username']) {
+                    $user = $struct;
+                    break;
+                }
+            }
+
+            if (password_verify($_POST['password'], $user['password'])) {
+                header("location:../index.php");
             }
         }
     }
