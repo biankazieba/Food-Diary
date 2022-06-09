@@ -117,10 +117,12 @@ p {
 
 .box1 {
     width: 95%;
-    height: 15rem;
+    height: 13rem;
     border-radius: 25px;
-    background-color: #eedce5;
-    margin-top: 1rem;
+    background: #f39ebc81;
+    background: -webkit-linear-gradient(to right, #b36880, #f39ebc81);
+    background: linear-gradient(to right, #b36880, #f39ebc81);
+    margin-top: 4rem;
     margin-left: 2rem;
     position: relative;
 
@@ -132,8 +134,8 @@ p {
     font-weight: 800;
     color: #ffffff;
     margin-bottom: 0;
-    margin-left: 25rem;
-    padding-top: 3rem;
+    margin-left: 27rem;
+    padding-top: 2rem;
 }
 
 #date {
@@ -143,6 +145,16 @@ p {
     color: #ffffff;
     margin-top: 0;
     margin-left: 34rem;
+}
+
+.box2 {
+    width: 95%;
+    height: 30rem;
+    border-radius: 25px;
+    background-color: #d69bae96;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    position: relative;
 }
 
 .boxes {

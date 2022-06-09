@@ -26,8 +26,8 @@
         <h1 id="dayname"></h1>
         <h1 id="date"></h1>
     </div>
+    <input class="foodinput" classtype="text" placeholder="Track your Nutrition" />
     <div class="box2"></div>
-    <div class="box3"></div>
 
     <div class="footer">
         <p>Food Diary</p>
