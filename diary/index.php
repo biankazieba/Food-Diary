@@ -31,7 +31,13 @@
         <button type="submit" name="add" class="add">ADD</button>
     </form>
     <div class="box2">
-        <?php
+        <h1 class="food-name">Pizza</h1>
+        <p class="amount">Amount :</p>
+        <p class="amountapi">1</p>
+        <p class="type">Type :</p>
+        <p class="typeapi">Slice</p>
+
+        <!--?php
         if ($_SERVER['REQUEST_METHOD'] == "POST" and isset(($_POST['add']))) {
 
             $url = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
@@ -51,9 +57,10 @@
             if ($result === FALSE) {
             }
 
-            echo ('<h1 class="food-name"' . $result['foods'][0]['food_name'] . '</h1>');
+            echo ('<h1 class="food-name">' . $result['foods'][0]['food_name'] . '</h1>');
+            echo ('<h1 class="unit">' . $result['foods'][0]['serving_unit'] . '</h1>');
         }
-        ?>
+        ?-->
     </div>
 
     <div class="footer">

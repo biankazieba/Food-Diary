@@ -173,6 +173,58 @@ p {
     color: white;
 }
 
+.food-name {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin-left: 5rem;
+    padding-top: 2rem;
+    text-transform: uppercase;
+}
+
+.amountapi {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 3rem;
+    float: left;
+}
+
+.amount {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 4rem;
+    float: left;
+}
+
+.typeapi {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    margin-left: -5rem;
+    margin-top: 3rem;
+    float: left;
+}
+
+.type {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    margin-left: -12rem;
+    margin-top: 3rem;
+    float: left;
+}
+
 .box2 {
     width: 95%;
     height: 30rem;
