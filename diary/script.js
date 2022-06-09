@@ -21,3 +21,4 @@ let year = date.getFullYear();
 let fullDate = `${day}.${month}.${year} `;
 document.getElementById("date").innerText = fullDate;
 document.getElementById("dayname").innerText = dayname[date.getDay() - 1];
+

@@ -26,9 +26,9 @@
         <h1 id="dayname"></h1>
         <h1 id="date"></h1>
     </div>
-    <form autocomplete="off" action="index.php" method="post">
-        <input name="input" class="foodinput" classtype="text" placeholder="Track your Nutrition" />
-        <button type="submit" name="add" class="add">ADD</button>
+    <form autocomplete="off" id="form" action="index.php" method="GET">
+        <input name="add" class="foodinput" type="text" placeholder="Track your Nutrition" />
+        <button type="submit" class="add">ADD</button>
     </form>
     <div class="box2">
         <h1 class="food-name">Pizza</h1>
@@ -38,10 +38,9 @@
         <p class="typeapi">Slice</p>
 
         <!--?php
-        if ($_SERVER['REQUEST_METHOD'] == "POST" and isset(($_POST['add']))) {
-
+        if (isset(($_REQUEST['add']))) {
             $url = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
-            $data = json_encode(array('query' => $_POST['input'], 'include_subrecipe' => true));
+            $data = json_encode(array('query' => $_REQUEST['add']));
 
             $options = array(
                 'http' => array(
@@ -52,13 +51,11 @@
                     'content' => $data
                 )
             );
+
             $context  = stream_context_create($options);
             $result = json_decode(file_get_contents($url, false, $context), true);
-            if ($result === FALSE) {
-            }
 
             echo ('<h1 class="food-name">' . $result['foods'][0]['food_name'] . '</h1>');
-            echo ('<h1 class="unit">' . $result['foods'][0]['serving_unit'] . '</h1>');
         }
         ?-->
     </div>
