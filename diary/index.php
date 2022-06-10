@@ -31,11 +31,12 @@
         <button type="submit" class="add">ADD</button>
     </form>
     <div class="box2">
+        <div class="kcalcircle"></div>
+        <p class="calories">187</p>
+        <p class="kcal">kcal</p>
         <h1 class="food-name">Pizza</h1>
-        <p class="amount">Amount :</p>
-        <p class="amountapi">1</p>
-        <p class="type">Type :</p>
-        <p class="typeapi">Slice</p>
+        <div class="line"></div>
+        <p class=""></p>
 
         <!--?php
         if (isset(($_REQUEST['add']))) {
