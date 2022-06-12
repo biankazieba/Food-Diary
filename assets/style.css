@@ -125,7 +125,11 @@ p {
     margin-top: 4rem;
     margin-left: 2rem;
     position: relative;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    flex-wrap: wrap;
 }
 
 #dayname {
@@ -133,9 +137,7 @@ p {
     font-size: 4em;
     font-weight: 800;
     color: #ffffff;
-    margin-bottom: 0;
-    margin-left: 31rem;
-    padding-top: 2rem;
+    display: block;
 }
 
 #date {
@@ -143,8 +145,7 @@ p {
     font-size: 1.5em;
     font-weight: 800;
     color: #ffffff;
-    margin-top: 0;
-    margin-left: 34rem;
+    display: block;
 }
 
 .foodinput {
@@ -272,6 +273,8 @@ p {
     align-items: center;
     justify-content: center;
     border-top: rgb(0, 0, 0) 2px solid;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .footer p {
@@ -280,6 +283,7 @@ p {
     font-family: 'metropolisblack ', sans-serif;
     font-weight: bold;
     font-size: 20px;
+
 }
 
 @media screen and (max-width: 350px) {}

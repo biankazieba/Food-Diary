@@ -12,7 +12,7 @@ function scrollFunction() {
     }
 }
 
-let dayname = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+let dayname = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 let date = new Date();
 let day = date.getDate();
 let month = date.getMonth() + 1;
@@ -20,5 +20,5 @@ let year = date.getFullYear();
 
 let fullDate = `${day}.${month}.${year} `;
 document.getElementById("date").innerText = fullDate;
-document.getElementById("dayname").innerText = dayname[date.getDay() - 1];
+document.getElementById("dayname").innerText = dayname[date.getDay()];
 
