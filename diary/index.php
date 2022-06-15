@@ -47,36 +47,49 @@
         $jsonFile = file_get_contents("../login/users.json");
         $json = json_decode($jsonFile, true);
 
-        if (isset(($_REQUEST['add']))) {
-            $url = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
-            $data = json_encode(array('query' => $_REQUEST['add']));
+        // if (isset(($_REQUEST['add']))) {
+        //     $url = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
+        //     $data = json_encode(array('query' => $_REQUEST['add']));
 
-            $options = array(
-                'http' => array(
-                    'header'  => "Content-type: application/json\r\n" .
-                        "x-app-id: 76e56102\r\n" .
-                        "x-app-key: e9b44356bf92babee2a1b35ed581036b\r\n",
-                    'method'  => 'POST',
-                    'content' => $data
-                )
-            );
+        //     $options = array(
+        //         'http' => array(
+        //             'header'  => "Content-type: application/json\r\n" .
+        //                 "x-app-id: 76e56102\r\n" .
+        //                 "x-app-key: e9b44356bf92babee2a1b35ed581036b\r\n",
+        //             'method'  => 'POST',
+        //             'content' => $data
+        //         )
+        //     );
 
-            $context  = stream_context_create($options);
-            $result = json_decode(file_get_contents($url, false, $context), true);
+        //     $context  = stream_context_create($options);
+        //     $result = json_decode(file_get_contents($url, false, $context), true);
 
-            echo ('<p class="kcal">kcal</p>');
-            echo ('<div class="kcalcircle">');
-            echo ('<p class="calories">' . round($result['foods'][0]['nf_calories'], 0) . '</p>');
-            echo ('</div>');
-            echo ('<h1 class="food-name">' . $result['foods'][0]['food_name'] . '</h1>');
-            echo ('<div class="line"></div>');
-            echo ('<div class="nutinfos">');
-            echo ('<p class="fett">F: ' . $result['foods'][0]['nf_total_fat'] . '</p>');
-            echo ('<p class="hydrate">H: ' . $result['foods'][0]['nf_total_carbohydrate'] . '</p>');
-            echo ('<p class="sugar">S: ' . $result['foods'][0]['nf_sugars'] . '</p>');
-            echo ('<p class="protein">P: ' . $result['foods'][0]['nf_protein'] . '</p>');
-            echo ('</div>');
-        }
+        //     echo ('<p class="kcal">kcal</p>');
+        //     echo ('<div class="kcalcircle">');
+        //     echo ('<p class="calories">' . round($result['foods'][0]['nf_calories'], 0) . '</p>');
+        //     echo ('</div>');
+        //     echo ('<h1 class="food-name">' . $result['foods'][0]['food_name'] . '</h1>');
+        //     echo ('<div class="line"></div>');
+        //     echo ('<div class="nutinfos">');
+        //     echo ('<p class="fett">F: ' . $result['foods'][0]['nf_total_fat'] . '</p>');
+        //     echo ('<p class="hydrate">H: ' . $result['foods'][0]['nf_total_carbohydrate'] . '</p>');
+        //     echo ('<p class="sugar">S: ' . $result['foods'][0]['nf_sugars'] . '</p>');
+        //     echo ('<p class="protein">P: ' . $result['foods'][0]['nf_protein'] . '</p>');
+        //     echo ('</div>');
+        // }
+
+        echo ('<p class="kcal">kcal</p>');
+        echo ('<div class="kcalcircle">');
+        echo ('<p class="calories">200</p>');
+        echo ('</div>');
+        echo ('<h1 class="food-name">Pipi</h1>');
+        echo ('<div class="line"></div>');
+        echo ('<div class="nutinfos">');
+        echo ('<p class="fett">F: 187</p>');
+        echo ('<p class="hydrate">H: 420</p>');
+        echo ('<p class="sugar">S: 69</p>');
+        echo ('<p class="protein">P: 1337</p>');
+        echo ('</div>');
 
         // user aus array nehmen
         $user = null;
@@ -87,6 +100,7 @@
             }
         }
 
+        echo ('<div class="eaten">TODAY EATEN:</div>');
         echo ('<div class="slideline"></div>');
 
         // user id nehmen
@@ -98,7 +112,7 @@
 
         echo ('<div class="slides">');
         foreach ($foods as $food) {
-            echo ('<div class="slide">' . $food["name"] . ' <span class="material-symbols-outlined">delete</span></div>');
+            echo ('<div class="slide" id="slidename">' . $food["name"] . ' <span class="material-symbols-outlined">delete</span></div>');
         }
         echo ('</div>');
 

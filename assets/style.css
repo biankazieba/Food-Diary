@@ -184,8 +184,8 @@ p {
     border-style: solid;
     border-radius: 50%;
     position: absolute;
-    margin-top: 2rem;
-    margin-left: 3rem;
+    margin-top: 3rem;
+    margin-left: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,8 +206,8 @@ p {
     font-weight: 800;
     position: absolute;
     color: white;
-    margin-top: 5.5rem;
-    margin-left: 73px;
+    margin-top: 6.5rem;
+    margin-left: 89px;
 }
 
 .food-name {
@@ -216,7 +216,7 @@ p {
     font-weight: 800;
     color: #b36880;
     margin-left: 13rem;
-    padding-top: 2rem;
+    padding-top: 3rem;
     text-transform: uppercase;
 }
 
@@ -269,12 +269,23 @@ p {
     float: left;
 }
 
+.eaten {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+    position: absolute;
+    margin-left: 48rem;
+    margin-top: -3rem;
+}
+
 .slideline {
     height: 6px;
-    width: 25rem;
-    position: absolute;
-    margin-left: 13rem;
-    margin-top: -2rem;
+    width: 22rem;
+    float: right;
+    margin-right: 5rem;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
     background-color: #ffffff;
 }
 
@@ -289,16 +300,34 @@ p {
 
 .slide {
     height: 3rem;
-    width: 20rem;
-    background-color: red;
-    outline: solid;
+    width: 22rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    transition: all .4s ease-in-out;
+}
+
+.slide:hover {
+    transform: scale(1.1);
 }
 
 .slide span {
     float: right;
     cursor: pointer;
+    padding-left: 14rem;
+}
+
+#slidename {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    color: #b36880;
+    text-transform: uppercase;
 }
 
 .box2 {
