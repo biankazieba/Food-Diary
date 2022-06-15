@@ -1,1 +1,11 @@
-{"users":[{"username":"leon","password":"$2y$10$TTJUQHg9wW5DEg3q2kyHVu9mloskwnWQHq1SnuY.LkUkpgQCXXLPW"},{"username":"deigo","password":"$2y$10$6VfVE.VyMVQedPoRSfI.NOfGPP.yUj9wbJjOXmJta\/UwdKQze.pxK"},{"username":"test","password":"$2y$10$SOMF7KP2.RmxL0Hr7WElY.q3f7huxhZhkTOp6L5exBkQASN45VUZq"},{"username":"test88","password":"$2y$10$mAwMuFupx.vhZLIYO1hz8Oiiw6mywcw\/5sZ2KsOYlHTVCeq7Zr3mC"},{"username":"saidi","password":"$2y$10$6r4i2EJIlSY34zx.AYzo.e1OMgtcS6bkBZcYl6KXr47OLgcnLLEhO"}]}
+{
+  "users": [
+    {
+      "username": "saidi",
+      "password": "$2y$10$6r4i2EJIlSY34zx.AYzo.e1OMgtcS6bkBZcYl6KXr47OLgcnLLEhO",
+      "nutritions": {
+        "15-06-2022": [{ "name": "pizza" }, { "name": "apple" }]
+      }
+    }
+  ]
+}

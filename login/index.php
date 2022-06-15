@@ -50,7 +50,10 @@
     </div>
 
     <?php
-
+    session_start();
+    if (isset($_SESSION['login'])) {
+        header('location:../diary');
+    }
     if ($_SERVER['REQUEST_METHOD'] == "POST" and isset(($_POST['signUp']))) {
         if (empty($_POST['username'])) {
             echo "<script>alert('No username found!');</script>";
@@ -95,7 +98,8 @@
             }
 
             if (password_verify($_POST['password'], $user['password'])) {
-                header("location:../index.php");
+                $_SESSION['login'] = $user['username'];
+                header("location:../diary");
             }
         }
     }

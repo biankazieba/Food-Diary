@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo.svg" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Diary</title>
 </head>
 
@@ -15,7 +17,13 @@
     <!--Navbar-->
     <div id="navbar">
         <img id="logo" src="/assets/img/logo3.svg">
-        <a class="navi" href="/login/index.php">Login</a>
+        <?php
+        session_start();
+        if (isset($_SESSION['login'])) {
+            echo ('<a class="navi" href="/login/logout.php">Log out</a>');
+        } else {
+            echo ('<a class="navi" href="/login/index.php">Log in</a>');
+        } ?>
         <a class="navi" href="#">Recipes</a>
         <a class="navi-active" href="#">Diary</a>
         <a class="navi" href="/index.php">Home</a>
@@ -31,14 +39,14 @@
         <button type="submit" class="add">ADD</button>
     </form>
     <div class="box2">
-        <div class="kcalcircle"></div>
-        <p class="calories">187</p>
-        <p class="kcal">kcal</p>
-        <h1 class="food-name">Pizza</h1>
-        <div class="line"></div>
-        <p class=""></p>
+        <?php
+        if (!isset($_SESSION['login'])) {
+            header("location:../login/index.php");
+        }
 
-        <!--?php
+        $jsonFile = file_get_contents("../login/users.json");
+        $json = json_decode($jsonFile, true);
+
         if (isset(($_REQUEST['add']))) {
             $url = 'https://trackapi.nutritionix.com/v2/natural/nutrients';
             $data = json_encode(array('query' => $_REQUEST['add']));
@@ -56,9 +64,44 @@
             $context  = stream_context_create($options);
             $result = json_decode(file_get_contents($url, false, $context), true);
 
+            echo ('<p class="kcal">kcal</p>');
+            echo ('<div class="kcalcircle">');
+            echo ('<p class="calories">' . round($result['foods'][0]['nf_calories'], 0) . '</p>');
+            echo ('</div>');
             echo ('<h1 class="food-name">' . $result['foods'][0]['food_name'] . '</h1>');
+            echo ('<div class="line"></div>');
+            echo ('<p class="amountapi">Amount: ' . $result['foods'][0]['serving_qty'] . '</p>');
+            echo ('<p>Type: ' . $result['foods'][0]['serving_unit'] . '</p>');
+            echo ('<p>F: ' . $result['foods'][0]['nf_total_fat'] . '</p>');
+            echo ('<p>H: ' . $result['foods'][0]['nf_total_carbohydrate'] . '</p>');
+            echo ('<p>S: ' . $result['foods'][0]['nf_sugars'] . '</p>');
+            echo ('<p>P: ' . $result['foods'][0]['nf_protein'] . '</p>');
         }
-        ?-->
+
+        // user aus array nehmen
+        $user = null;
+        foreach ($json['users'] as $struct) {
+            if ($_SESSION["login"] == $struct['username']) {
+                $user = $struct;
+                break;
+            }
+        }
+
+        // user id nehmen
+        $id = array_search($user, $json);
+
+        // nutrition von heute
+        $datum = date("d-m-Y");
+        $foods = $json["users"][$id]["nutritions"][$datum];
+
+        echo ('<div class="slides">');
+        foreach ($foods as $food) {
+            echo ('<div class="slide">' . $food["name"] . ' <span class="material-symbols-outlined">delete</span></div>');
+        }
+        echo ('</div>');
+
+        ?>
+
     </div>
 
     <div class="footer">

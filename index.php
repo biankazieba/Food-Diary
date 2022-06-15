@@ -10,12 +10,19 @@
     <title>Homepage</title>
 </head>
 
-
 <body>
     <!--Navbar-->
     <div id="navbar">
         <img id="logo" src="/assets/img/logo3.svg">
-        <a class="navi" href="/login/index.php">Login</a>
+        <a class="navi" href="/login/index.php">
+            <?php
+            session_start();
+            if (isset($_SESSION['login'])) {
+                echo ('<a class="navi" href="/login/logout.php">Log out</a>');
+            } else {
+                echo ('<a class="navi" href="/login/index.php">Log in</a>');
+            } ?>
+        </a>
         <a class="navi" href="#">Recipes</a>
         <a class="navi" href="/diary/index.php">Diary</a>
         <a class="navi-active" href="#">Home</a>
@@ -46,7 +53,6 @@
         <p>Abschlussprojekt von Bianka Zieba</p>
         <p>ZLI 2021/2022</p>
     </div>
-
     <script src="assets/script.js"></script>
 </body>
 
