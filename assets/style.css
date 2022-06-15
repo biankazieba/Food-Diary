@@ -128,8 +128,9 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 10%;
+    padding: 0px 27%;
     flex-wrap: wrap;
+    line-height: 0px;
 }
 
 #dayname {
@@ -146,6 +147,7 @@ p {
     font-weight: 800;
     color: #ffffff;
     display: block;
+    margin-top: -3rem;
 }
 
 .foodinput {
