@@ -235,7 +235,51 @@ p {
     font-weight: 800;
     position: absolute;
     color: white;
+}
+
+.type {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    position: absolute;
+    color: white;
+    margin-top: 1rem;
+}
+
+.fett {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    position: absolute;
+    color: white;
     margin-top: 2rem;
+}
+
+.hydrate {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    position: absolute;
+    color: white;
+    margin-top: 3rem;
+}
+
+.sugar {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    position: absolute;
+    color: white;
+    margin-top: 4rem;
+}
+
+.protein {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    position: absolute;
+    color: white;
+    margin-top: 5rem;
 }
 
 .slides {

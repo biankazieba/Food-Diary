@@ -71,11 +71,11 @@
             echo ('<h1 class="food-name">' . $result['foods'][0]['food_name'] . '</h1>');
             echo ('<div class="line"></div>');
             echo ('<p class="amountapi">Amount: ' . $result['foods'][0]['serving_qty'] . '</p>');
-            echo ('<p>Type: ' . $result['foods'][0]['serving_unit'] . '</p>');
-            echo ('<p>F: ' . $result['foods'][0]['nf_total_fat'] . '</p>');
-            echo ('<p>H: ' . $result['foods'][0]['nf_total_carbohydrate'] . '</p>');
-            echo ('<p>S: ' . $result['foods'][0]['nf_sugars'] . '</p>');
-            echo ('<p>P: ' . $result['foods'][0]['nf_protein'] . '</p>');
+            echo ('<p class="type">Type: ' . $result['foods'][0]['serving_unit'] . '</p>');
+            echo ('<p class="fett">F: ' . $result['foods'][0]['nf_total_fat'] . '</p>');
+            echo ('<p class="hydrate">H: ' . $result['foods'][0]['nf_total_carbohydrate'] . '</p>');
+            echo ('<p class="sugar">S: ' . $result['foods'][0]['nf_sugars'] . '</p>');
+            echo ('<p class="protein">P: ' . $result['foods'][0]['nf_protein'] . '</p>');
         }
 
         // user aus array nehmen
