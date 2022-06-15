@@ -70,12 +70,12 @@
             echo ('</div>');
             echo ('<h1 class="food-name">' . $result['foods'][0]['food_name'] . '</h1>');
             echo ('<div class="line"></div>');
-            echo ('<p class="amountapi">Amount: ' . $result['foods'][0]['serving_qty'] . '</p>');
-            echo ('<p class="type">Type: ' . $result['foods'][0]['serving_unit'] . '</p>');
+            echo ('<div class="nutinfos">');
             echo ('<p class="fett">F: ' . $result['foods'][0]['nf_total_fat'] . '</p>');
             echo ('<p class="hydrate">H: ' . $result['foods'][0]['nf_total_carbohydrate'] . '</p>');
             echo ('<p class="sugar">S: ' . $result['foods'][0]['nf_sugars'] . '</p>');
             echo ('<p class="protein">P: ' . $result['foods'][0]['nf_protein'] . '</p>');
+            echo ('</div>');
         }
 
         // user aus array nehmen
@@ -86,6 +86,8 @@
                 break;
             }
         }
+
+        echo ('<div class="slideline"></div>');
 
         // user id nehmen
         $id = array_search($user, $json);

@@ -185,7 +185,7 @@ p {
     border-radius: 50%;
     position: absolute;
     margin-top: 2rem;
-    margin-left: 20rem;
+    margin-left: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -207,7 +207,7 @@ p {
     position: absolute;
     color: white;
     margin-top: 5.5rem;
-    margin-left: 347px;
+    margin-left: 73px;
 }
 
 .food-name {
@@ -215,7 +215,7 @@ p {
     font-size: 3rem;
     font-weight: 800;
     color: #b36880;
-    margin-left: 30rem;
+    margin-left: 13rem;
     padding-top: 2rem;
     text-transform: uppercase;
 }
@@ -224,67 +224,63 @@ p {
     height: 6px;
     width: 25rem;
     position: absolute;
-    margin-left: 30rem;
+    margin-left: 13rem;
     margin-top: -2rem;
     background-color: #ffffff;
 }
 
-.amountapi {
-    font-family: 'metropolisblack ', sans-serif;
-    font-size: 1rem;
-    font-weight: 800;
-    position: absolute;
-    color: white;
-}
-
-.type {
-    font-family: 'metropolisblack ', sans-serif;
-    font-size: 1rem;
-    font-weight: 800;
-    position: absolute;
-    color: white;
-    margin-top: 1rem;
+.nutinfos {
+    margin-left: 13rem;
+    margin-top: -1rem;
 }
 
 .fett {
     font-family: 'metropolisblack ', sans-serif;
     font-size: 1rem;
     font-weight: 800;
-    position: absolute;
     color: white;
-    margin-top: 2rem;
+    float: left;
+    padding-right: 1rem;
 }
 
 .hydrate {
     font-family: 'metropolisblack ', sans-serif;
     font-size: 1rem;
     font-weight: 800;
-    position: absolute;
     color: white;
-    margin-top: 3rem;
+    float: left;
+    padding-right: 1rem;
 }
 
 .sugar {
     font-family: 'metropolisblack ', sans-serif;
     font-size: 1rem;
     font-weight: 800;
-    position: absolute;
     color: white;
-    margin-top: 4rem;
+    float: left;
+    padding-right: 1rem;
 }
 
 .protein {
     font-family: 'metropolisblack ', sans-serif;
     font-size: 1rem;
     font-weight: 800;
-    position: absolute;
     color: white;
-    margin-top: 5rem;
+    float: left;
+}
+
+.slideline {
+    height: 6px;
+    width: 25rem;
+    position: absolute;
+    margin-left: 13rem;
+    margin-top: -2rem;
+    background-color: #ffffff;
 }
 
 .slides {
     float: right;
-    margin-top: 2rem;
+    margin-top: 0rem;
     margin-right: 5rem;
     display: flex;
     flex-wrap: wrap;
@@ -292,7 +288,7 @@ p {
 }
 
 .slide {
-    height: 2rem;
+    height: 3rem;
     width: 20rem;
     background-color: red;
     outline: solid;
