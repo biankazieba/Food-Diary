@@ -175,6 +175,12 @@ p {
     font-weight: 800;
     text-decoration: none;
     color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all .4s ease-in-out;
+}
+
+.add:hover {
+    transform: scale(1.1);
 }
 
 .kcalcircle {
@@ -270,9 +276,23 @@ p {
     float: left;
 }
 
-.eaten {
+.evrcircle {
+    width: 16rem;
+    height: 6rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: none;
+    position: absolute;
+    margin-top: 3rem;
+    margin-left: 29rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.ate {
     font-family: 'metropolisblack ', sans-serif;
     font-size: 1rem;
+    display: flex;
     font-weight: 800;
     color: white;
     position: absolute;

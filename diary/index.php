@@ -90,6 +90,7 @@
         echo ('<p class="sugar">S: 69</p>');
         echo ('<p class="protein">P: 1337</p>');
         echo ('</div>');
+        echo ('<div class="evrcircle"></div>');
 
         // user aus array nehmen
         $user = null;
@@ -100,7 +101,7 @@
             }
         }
 
-        echo ('<div class="eaten">TODAY EATEN:</div>');
+        echo ('<div class="ate">ATE TODAY:</div>');
         echo ('<div class="slideline"></div>');
 
         // user id nehmen
