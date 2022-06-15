@@ -128,7 +128,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 27%;
+    padding: 0px 40%;
     flex-wrap: wrap;
     line-height: 0px;
 }
@@ -276,18 +276,39 @@ p {
     float: left;
 }
 
-.evrcircle {
-    width: 16rem;
-    height: 6rem;
+.evrbox {
+    width: 34rem;
+    height: 6.5rem;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border: none;
     position: absolute;
-    margin-top: 3rem;
-    margin-left: 29rem;
+    border-radius: 10px;
+    margin-top: 9rem;
+    margin-left: 5rem;
     justify-content: center;
     align-items: center;
 }
+
+.evrline {
+    width: 32rem;
+    height: 5px;
+    background-color: #d69bae96;
+    margin-top: 3rem;
+    margin-left: 15px;
+}
+
+.ervnutrition {
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 15px;
+    display: flex;
+    font-weight: 800;
+    color: #ffffff;
+    position: absolute;
+    margin-left: 6rem;
+    margin-top: 5rem;
+}
+
 
 .ate {
     font-family: 'metropolisblack ', sans-serif;
@@ -412,7 +433,12 @@ p {
 
 }
 
+
+@media screen and (max-width:992px) {}
+
 @media screen and (max-width: 350px) {}
+
+
 
 @keyframes circle {
     50% {

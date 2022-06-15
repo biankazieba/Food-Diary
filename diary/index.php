@@ -90,7 +90,10 @@
         echo ('<p class="sugar">S: 69</p>');
         echo ('<p class="protein">P: 1337</p>');
         echo ('</div>');
-        echo ('<div class="evrcircle"></div>');
+        echo ('<p class="ervnutrition">SJVNKDNV</p>');
+        echo ('<div class="evrbox">');
+        echo ('<div class="evrline"></div>');
+        echo ('</div>');
 
         // user aus array nehmen
         $user = null;
