@@ -307,7 +307,7 @@ p {
     color: #ffffff;
     position: absolute;
     margin-left: 6rem;
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 
 
@@ -403,10 +403,11 @@ p {
 
 .firsttext {
     position: absolute;
-    margin-top: 30px;
-    margin-left: 10px;
+    margin-top: 40px;
+    margin-left: 30px;
     font-family: 'metropolisblack ', sans-serif;
-    font-size: 37px;
+    text-shadow: 2px 1px 30px rgba(93, 95, 99, 0.527);
+    font-size: 46px;
     font-weight: 800;
     color: #ffffff;
 }
@@ -433,11 +434,21 @@ p {
     float: left;
 }
 
+.secondtext {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 2rem;
+    font-family: 'metropolisblack ', sans-serif;
+    font-size: 46px;
+    font-weight: 800;
+    color: #c597a7;
+}
+
 .footer {
     width: 90%;
     height: 10rem;
     background-color: #ffffff;
-    margin-top: 35rem;
+    margin-top: 15rem;
     margin-left: 4rem;
     display: flex;
     align-items: center;
@@ -445,6 +456,12 @@ p {
     border-top: rgb(0, 0, 0) 2px solid;
     display: flex;
     flex-wrap: wrap;
+}
+
+.loginimg {
+    width: 50%;
+    margin-top: 7rem;
+    margin-left: 14rem;
 }
 
 .footer p {

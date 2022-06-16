@@ -43,11 +43,14 @@
     <!--Boxes-->
     <div class="boxes">
         <div class="firstbox">
-            <p class="firsttext">TRY OUR FOOD TRACKER!</p>
+            <p class="firsttext">TRACK YOUR FOOD</p>
             <img class="lasagne" src="/assets/img/lasagne.png">
             <img class="slidesimg" src="/assets/img/slides.png">
         </div>
-        <div class="secondbox"></div>
+        <div class="secondbox">
+            <p class="secondtext">LOG IN<br> AND<br> START<br> NOW</p>
+            <img class="loginimg" src="/assets/img/login.png">
+        </div>
     </div>
 
     <!--Footer-->
