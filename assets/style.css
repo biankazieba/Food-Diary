@@ -379,7 +379,7 @@ p {
     border-radius: 25px;
     background-color: #d69bae96;
     margin-left: 2rem;
-    margin-top: 6rem;
+    margin-top: 7rem;
     position: relative;
 }
 
@@ -396,10 +396,17 @@ p {
     height: 30rem;
     border-radius: 25px;
     background-color: #c597a7;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin: 3rem;
     margin-right: 1rem;
     float: left;
+    transition: all .4s ease-in-out;
 }
+
+.firstbox:hover {
+    transform: scale(102%);
+}
+
 
 .firsttext {
     position: absolute;
@@ -429,10 +436,17 @@ p {
     height: 30rem;
     border-radius: 25px;
     background-color: #f0e1e681;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin: 3rem;
     margin-left: 1rem;
     float: left;
+    transition: all .4s ease-in-out;
 }
+
+.secondbox:hover {
+    transform: scale(102%);
+}
+
 
 .secondtext {
     position: absolute;
@@ -448,7 +462,7 @@ p {
     width: 90%;
     height: 10rem;
     background-color: #ffffff;
-    margin-top: 15rem;
+    margin-top: 13rem;
     margin-left: 4rem;
     display: flex;
     align-items: center;
