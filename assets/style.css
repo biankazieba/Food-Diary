@@ -458,6 +458,46 @@ p {
     color: #c597a7;
 }
 
+.recipe1 {
+    height: 25rem;
+    width: 30rem;
+    background-color: #c597a718;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    margin: 5rem;
+    float: left;
+}
+
+.recipe2 {
+    height: 25rem;
+    width: 35rem;
+    background-color: #47404308;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    float: left;
+    margin-top: 5rem;
+}
+
+.recipe3 {
+    height: 25rem;
+    width: 30rem;
+    background-color: #c597a718;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    margin: 5rem;
+    margin-top: 0;
+    float: right;
+}
+
+.recipe4 {
+    height: 25rem;
+    width: 35rem;
+    background-color: #47404308;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    float: right;
+}
+
 .footer {
     width: 90%;
     height: 10rem;

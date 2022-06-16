@@ -24,8 +24,8 @@
         } else {
             echo ('<a class="navi" href="/login/index.php">Log in</a>');
         } ?>
-        <a class="navi" href="#">Recipes</a>
-        <a class="navi-active" href="#">Diary</a>
+        <a class="navi" href="/recipes/index.php">Recipes</a>
+        <a class="navi-active" href="/diary/index.php">Diary</a>
         <a class="navi" href="/index.php">Home</a>
     </div>
     <div class="navbar-bg"></div>

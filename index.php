@@ -23,7 +23,7 @@
                 echo ('<a class="navi" href="/login/index.php">Log in</a>');
             } ?>
         </a>
-        <a class="navi" href="#">Recipes</a>
+        <a class="navi" href="/recipes/index.php">Recipes</a>
         <a class="navi" href="/diary/index.php">Diary</a>
         <a class="navi-active" href="#">Home</a>
     </div>
