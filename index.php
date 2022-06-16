@@ -42,7 +42,11 @@
     </div>
     <!--Boxes-->
     <div class="boxes">
-        <div class="firstbox"></div>
+        <div class="firstbox">
+            <p class="firsttext">TRY OUR FOOD TRACKER!</p>
+            <img class="lasagne" src="/assets/img/lasagne.png">
+            <img class="slidesimg" src="/assets/img/slides.png">
+        </div>
         <div class="secondbox"></div>
     </div>
 
