@@ -35,12 +35,12 @@
         </div>
         <div class="overlay-container">
             <div class="overlay">
-                <div class="overlay-panel overlay-left">
+                <div class="overlay-side overlay-left">
                     <h1>Welcome Back!</h1>
                     <p>We missed you</p>
                     <button class="ghost" id="signIn">Sign In</button>
                 </div>
-                <div class="overlay-panel overlay-right">
+                <div class="overlay-side overlay-right">
                     <h1>Hello!</h1>
                     <p>Enter your personal details and start tracking your Nutrition</p>
                     <button class="ghost" id="signUp">Sign Up</button>
@@ -68,7 +68,13 @@
             if (in_array($_POST['username'], array_column($json['users'], "username"))) {
                 echo "<script>alert('User already exists!');</script>";
             } else {
-                $json['users'][] = ["username" => $_POST['username'], "password" => password_hash($_POST['password'], PASSWORD_DEFAULT)];
+                $json['users'][] = [
+                    "username" => $_POST['username'],
+                    "password" => password_hash(
+                        $_POST['password'],
+                        PASSWORD_DEFAULT
+                    )
+                ];
                 $jsonString = json_encode($json);
                 file_put_contents("./users.json", $jsonString);
                 header("location:../index.php");
@@ -100,6 +106,8 @@
             if (password_verify($_POST['password'], $user['password'])) {
                 $_SESSION['login'] = $user['username'];
                 header("location:../diary");
+            } else {
+                echo "<script>alert('Password Default');</script>";
             }
         }
     }

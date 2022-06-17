@@ -80,15 +80,15 @@
 
         echo ('<p class="kcal">kcal</p>');
         echo ('<div class="kcalcircle">');
-        echo ('<p class="calories">550</p>');
+        echo ('<p class="calories">113</p>');
         echo ('</div>');
-        echo ('<h1 class="food-name">Spinach Lasagne</h1>');
+        echo ('<h1 class="food-name">Broccoli</h1>');
         echo ('<div class="line"></div>');
         echo ('<div class="nutinfos">');
-        echo ('<p class="fett">F: 41.25</p>');
-        echo ('<p class="hydrate">H: 60.5</p>');
+        echo ('<p class="fett">F: 0.8</p>');
+        echo ('<p class="hydrate">H: 10.8</p>');
         echo ('<p class="sugar">S: 0</p>');
-        echo ('<p class="protein">P: 27.5</p>');
+        echo ('<p class="protein">P: 12.2</p>');
         echo ('</div>');
         echo ('<p class="ervnutrition">SUMMARY:</p>');
         echo ('<div class="evrbox">');
