@@ -1,11 +1,1 @@
-{
-  "users": [
-    {
-      "username": "saidi",
-      "password": "$2y$10$6r4i2EJIlSY34zx.AYzo.e1OMgtcS6bkBZcYl6KXr47OLgcnLLEhO",
-      "nutritions": {
-        "16-06-2022": [{ "name": "pizza" }, { "name": "apple" }]
-      }
-    }
-  ]
-}
+{"users":[{"username":"saidi","password":"$2y$10$6r4i2EJIlSY34zx.AYzo.e1OMgtcS6bkBZcYl6KXr47OLgcnLLEhO","nutritions":{"22-06-2022":[{"name":"pizza","calories":285,"fat":10.37,"carbohydrates":35.66,"sugars":3.83,"protein":12.19},{"name":"pizza","calories":285,"fat":10.37,"carbohydrates":35.66,"sugars":3.83,"protein":12.19}]}},{"username":"bibi","password":"$2y$10$0GXXfT5QnE3HjyI8K3KqZ.z.e3UlUjuLeU.2t4pe.5GA7ARCtozpe"}]}

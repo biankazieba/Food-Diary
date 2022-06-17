@@ -16,7 +16,7 @@
         <div class="form-container sign-up-container">
             <form action="index.php" method="post">
                 <h1>Sign up</h1>
-                <span>to check your food diary</span>
+                <span>or use your account</span>
                 <input name="username" type="text" placeholder="Username" />
                 <input name="password" type="password" placeholder="Password" />
                 <input name="passwordConfirm" type="password" placeholder="Confirm Password" />
@@ -26,7 +26,7 @@
         <div class="form-container sign-in-container">
             <form action="index.php" method="post">
                 <h1>Sign in</h1>
-                <span>or use your account</span>
+                <span>to check your food diary</span>
                 <input name="username" type="text" placeholder="Username" />
                 <input name="password" type="password" placeholder="Password" />
                 <a href="#">Forgot your password?</a>
@@ -54,7 +54,7 @@
     if (isset($_SESSION['login'])) {
         header('location:../diary');
     }
-    if ($_SERVER['REQUEST_METHOD'] == "POST" and isset(($_POST['signUp']))) {
+    if (isset(($_POST['signUp']))) {
         if (empty($_POST['username'])) {
             echo "<script>alert('No username found!');</script>";
         } else if (empty($_POST['password']) or empty($_POST['passwordConfirm'])) {
@@ -75,13 +75,16 @@
                         PASSWORD_DEFAULT
                     )
                 ];
+                session_start();
+                $_SESSION['login'] = $_POST['username'];
+
                 $jsonString = json_encode($json);
                 file_put_contents("./users.json", $jsonString);
                 header("location:../index.php");
             }
         }
     }
-    if ($_SERVER['REQUEST_METHOD'] == "POST" and isset(($_POST['signIn']))) {
+    if (isset(($_POST['signIn']))) {
         if (empty($_POST['username'])) {
             echo "<script>alert('No username found!');</script>";
         } else if (empty($_POST['password'])) {
@@ -92,22 +95,20 @@
 
             if (!in_array($_POST['username'], array_column($json['users'], "username"))) {
                 echo "<script>alert('User not found, please sign up!');</script>";
-            }
-
-            // user aus array nehmen
-            $user = null;
-            foreach ($json['users'] as $struct) {
-                if ($_POST['username'] == $struct['username']) {
-                    $user = $struct;
-                    break;
-                }
-            }
-
-            if (password_verify($_POST['password'], $user['password'])) {
-                $_SESSION['login'] = $user['username'];
-                header("location:../diary");
             } else {
-                echo "<script>alert('Password Default');</script>";
+                $user = null;
+                foreach ($json['users'] as $struct) {
+                    if ($_POST['username'] == $struct['username']) {
+                        $user = $struct;
+                    }
+                }
+
+                if (password_verify($_POST['password'], $user['password'])) {
+                    $_SESSION['login'] = $user['username'];
+                    header("location:../diary");
+                } else {
+                    echo "<script>alert('Wrong Password');</script>";
+                }
             }
         }
     }

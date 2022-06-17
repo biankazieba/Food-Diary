@@ -13,5 +13,5 @@ Ausserdem wird man auch schnelle, einfache und Gesunde Rezepte finden, die jeder
 - CSS
 - JavaScript
 - PHP
-- Bootstrap
+- Nutrition API
 
